@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const mongoose = require('mongoose');
 
+const ServerPortRouter = require('./routes/ServerPortRouter');
 mongoose.connect('mongodb+srv://yuriy:Wdj_7yex6cE5cjp@cluster0-odkqs.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser:true}).then(
     () => {console.log('Database is connected') },
     err => { console.log('Can not connect to the database' +err)
