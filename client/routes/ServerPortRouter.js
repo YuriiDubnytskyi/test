@@ -4,11 +4,11 @@ const app = express();
 const ServerPortRouter = express.Router();
 
 const ServerPort = require('../models/ServerPort');
-const bodyParser = require('body-parser')
+
 
 
 // parse application/x-www-form-urlencoded
-app.use(require('connect').bodyParser());
+
 ServerPortRouter.route('/add').post(function (req, res) {
   const serverport = new ServerPort(req.body);
   
