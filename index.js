@@ -3,11 +3,11 @@ const path = require('path');
 
 const app = express();
 
-const Schema = mongoose.Schema;
 
 const ServerPortRouter = express.Router();
 const mongoose = require('mongoose');
 
+const Schema = mongoose.Schema;
 const ServerPort = new Schema({
   name: {
     type: String
