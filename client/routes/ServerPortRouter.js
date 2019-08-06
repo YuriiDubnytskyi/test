@@ -8,11 +8,11 @@ const bodyParser = require('body-parser')
 
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(require('connect').bodyParser());
 ServerPortRouter.route('/add').post(function (req, res) {
   const serverport = new ServerPort(req.body);
   
-  console.log(req.body)
+  console.log(req)
   serverport.save()
     .then(serverport => {
         res.json("aded item");
