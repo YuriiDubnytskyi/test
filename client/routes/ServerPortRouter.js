@@ -11,7 +11,7 @@ ServerPortRouter.route('/add').post(function (req, res) {
   console.log(req.body)
   serverport.save()
     .then(serverport => {
-        res.json('Server added successfully');
+        res.json(req);
     })
     .catch(err => {
     res.status(400).send("unable to save to database");
