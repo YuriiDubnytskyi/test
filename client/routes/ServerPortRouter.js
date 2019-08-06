@@ -4,14 +4,18 @@ const app = express();
 const ServerPortRouter = express.Router();
 
 const ServerPort = require('../models/ServerPort');
+const bodyParser = require('body-parser')
 
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 ServerPortRouter.route('/add').post(function (req, res) {
   const serverport = new ServerPort(req.body);
   
   console.log(req.body)
   serverport.save()
     .then(serverport => {
-        res.json(req);
+        res.json("aded item");
     })
     .catch(err => {
     res.status(400).send("unable to save to database");
