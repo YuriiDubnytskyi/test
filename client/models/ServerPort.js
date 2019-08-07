@@ -5,12 +5,10 @@ const Schema = mongoose.Schema;
 
 // Define collection and schema for ServerPort
 const ServerPort = new Schema({
-  name: {
-    type: String
-  },
-  port: {
-      type: Number
-  }
+  name: String,
+  ingredients: String,
+  preparation: String,
+  author: String
 },{
     collection: 'servers'
 });
