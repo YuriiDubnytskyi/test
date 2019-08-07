@@ -27,20 +27,9 @@ export default class Index extends Component {
 
     render() {
       return (
-        <div className="container">
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <td>ID</td>
-                  <td>Name</td>
-                  <td>Port</td>
-                </tr>
-              </thead>
-              <tbody>
-                {this.tabRow()}
-              </tbody>
-            </table>
-        </div>
+        <section className="d-block float-right col-sm-12">
+          {this.tabRow()}          
+        </section>
       );
     }
   }
