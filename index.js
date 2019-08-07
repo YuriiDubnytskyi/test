@@ -9,7 +9,9 @@ mongoose.connect('mongodb+srv://yuriy:Wdj_7yex6cE5cjp@cluster0-odkqs.mongodb.net
     () => {console.log('Database is connected') },
     err => { console.log('Can not connect to the database' +err)
 });
+var cors = require('cors')
 
+app.use(cors({credentials: true, origin: true}))
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
