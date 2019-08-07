@@ -18,7 +18,7 @@ constructor(props) {
         const serverport = {
             name: this.state.name
         }
-        axios.delete('/serverport/delete/' +this.props.obj._id)
+        axios.delete("/delete/", { params : {id: this.props.obj._id}})
         .then(res => console.log("sucsses"));
         
         
