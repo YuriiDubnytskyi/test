@@ -22,6 +22,18 @@ ServerPortRouter.route('/add').post(function (req, res) {
     });
 });
 
+ServerPortRouter.route('/delete').delete(function (req, res) {
+    const id = req.params.id;
+    User.findByIdAndDelete(id, function(err, user){
+                
+        if(err) return console.log(err);
+        res.send(user);
+    });
+});
+
+
+
+
 ServerPortRouter.route('/').get(function (req, res) {
     ServerPort.find(function (err, serverports){
     if(err){
